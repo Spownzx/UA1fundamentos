@@ -1,0 +1,232 @@
+<h1>4. Estructuras de decisión</h1>
+
+<p>
+Las estructuras de decisión permiten que un programa tome diferentes
+acciones dependiendo de una condición.
+</p>
+
+<p>
+En Python esto se hace usando las instrucciones <code>if</code>, 
+<code>elif</code> y <code>else</code>.
+</p>
+
+<h2>La instrucción if</h2>
+
+<p>
+La estructura <code>if</code> ejecuta un bloque de código solo si
+una condición es verdadera.
+</p>
+
+<pre><code class="language-python">
+edad = 20
+
+if edad >= 18:
+    print("Eres mayor de edad")
+</code></pre>
+
+<p>
+Si la condición es verdadera, el código dentro del bloque se ejecuta.
+</p>
+
+---
+
+<h2>Uso de if y else</h2>
+
+<p>
+La instrucción <code>else</code> permite ejecutar código cuando
+la condición del <code>if</code> no se cumple.
+</p>
+
+<pre><code class="language-python">
+edad = int(input("Escribe tu edad: "))
+
+if edad >= 18:
+    print("Puedes votar")
+else:
+    print("No puedes votar")
+</code></pre>
+
+---
+
+<h2>Uso de elif</h2>
+
+<p>
+La instrucción <code>elif</code> permite evaluar múltiples condiciones.
+</p>
+
+<pre><code class="language-python">
+calificacion = int(input("Escribe tu calificación: "))
+
+if calificacion >= 90:
+    print("Excelente")
+elif calificacion >= 70:
+    print("Aprobado")
+else:
+    print("Reprobado")
+</code></pre>
+
+---
+
+<h2>Condiciones múltiples</h2>
+
+<p>
+También podemos combinar condiciones usando operadores lógicos.
+</p>
+
+<pre><code class="language-python">
+edad = 25
+tiene_licencia = True
+
+if edad >= 18 and tiene_licencia:
+    print("Puede conducir")
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Programa que determina si un número es positivo, negativo o cero.
+</p>
+
+<pre><code class="language-python">
+numero = int(input("Escribe un número: "))
+
+if numero > 0:
+    print("El número es positivo")
+elif numero < 0:
+    print("El número es negativo")
+else:
+    print("El número es cero")
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Escribe un programa que pida la edad de una persona y determine
+si es menor de edad o mayor de edad.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+edad = int(input("Escribe tu edad: "))
+
+if edad >= 18:
+    print("Mayor de edad")
+else:
+    print("Menor de edad")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Escribe un programa que pida dos números y muestre cuál es el mayor.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+a = int(input("Primer número: "))
+b = int(input("Segundo número: "))
+
+if a > b:
+    print("El número mayor es", a)
+elif b > a:
+    print("El número mayor es", b)
+else:
+    print("Los números son iguales")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Escribe un programa que pida una calificación (0-100) y muestre:
+</p>
+
+<ul>
+<li>90-100 → Excelente</li>
+<li>70-89 → Aprobado</li>
+<li>Menor a 70 → Reprobado</li>
+</ul>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+calificacion = int(input("Calificación: "))
+
+if calificacion >= 90:
+    print("Excelente")
+elif calificacion >= 70:
+    print("Aprobado")
+else:
+    print("Reprobado")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Las estructuras de decisión permiten que un programa tome decisiones.</li>
+
+<li><code>if</code> ejecuta código cuando una condición es verdadera.</li>
+
+<li><code>else</code> se ejecuta cuando la condición no se cumple.</li>
+
+<li><code>elif</code> permite evaluar múltiples condiciones.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/03-operadores.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/05-bucles.html')">
+Tema siguiente ➡
+</button>
+
+</div>

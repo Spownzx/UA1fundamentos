@@ -1,0 +1,154 @@
+<h1>1. Introducción a Python</h1>
+
+<p>
+En esta guía aprenderás los fundamentos de programación usando 
+<strong>Python</strong>. El objetivo es aprender de forma práctica
+mediante ejemplos y ejercicios.
+</p>
+
+<h2>¿Qué es Python?</h2>
+
+<p>
+Python es un lenguaje de programación fácil de aprender y muy utilizado
+en áreas como desarrollo web, automatización, ciencia de datos e inteligencia artificial.
+</p>
+
+<p>
+Una de sus ventajas principales es que su sintaxis es clara y fácil de leer.
+</p>
+
+<pre><code class="language-python">
+print("Hola mundo")
+</code></pre>
+
+<p>
+Este es el programa más simple posible. La función <code>print()</code>
+muestra texto en la pantalla.
+</p>
+
+---
+
+<h2>Ejecutar un programa en Python</h2>
+
+<p>
+Para ejecutar un programa necesitas tener instalado 
+Python en tu computadora.
+</p>
+
+<p>
+Puedes crear un archivo llamado:
+</p>
+
+<pre><code class="language-python">
+hola.py
+</code></pre>
+
+<p>
+Dentro del archivo escribe:
+</p>
+
+<pre><code class="language-python">
+print("Hola mundo")
+</code></pre>
+
+<p>
+Luego ejecútalo desde la terminal:
+</p>
+
+<pre><code class="language-python">
+python hola.py
+</code></pre>
+
+---
+
+<h2>Entrada de datos</h2>
+
+<p>
+Un programa también puede recibir información del usuario usando
+la función <code>input()</code>.
+</p>
+
+<pre><code class="language-python">
+nombre = input("Escribe tu nombre: ")
+
+print("Hola", nombre)
+</code></pre>
+
+<p>
+El programa preguntará el nombre y luego mostrará un saludo.
+</p>
+
+---
+
+<h2>Ejemplo completo</h2>
+
+<p>
+Un pequeño programa que pide nombre y edad:
+</p>
+
+<pre><code class="language-python">
+nombre = input("Escribe tu nombre: ")
+edad = input("Escribe tu edad: ")
+
+print("Hola", nombre)
+print("Tienes", edad, "años")
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Escribe un programa que pida al usuario su ciudad
+y luego imprima un mensaje como:
+</p>
+
+<p>
+<em>"Vives en [ciudad]"</em>
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+ciudad = input("¿En qué ciudad vives?: ")
+
+print("Vives en", ciudad)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Python es un lenguaje fácil de aprender.</li>
+
+<li>La función <code>print()</code> se usa para mostrar información.</li>
+
+<li>La función <code>input()</code> permite recibir datos del usuario.</li>
+
+<li>Los programas de Python se guardan en archivos <code>.py</code>.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/02-variables.html')">
+Tema siguiente ➡
+</button>
+
+</div>

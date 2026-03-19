@@ -1,0 +1,252 @@
+<h1>12. Proyecto final: Gestor de tareas</h1>
+
+<p>
+En este proyecto construiremos un pequeño programa para administrar tareas
+desde la consola.
+</p>
+
+<p>
+El programa permitirá:
+</p>
+
+<ul>
+<li>Agregar tareas</li>
+<li>Mostrar tareas</li>
+<li>Guardar tareas en un archivo</li>
+</ul>
+
+---
+
+<h2>Paso 1: Crear una lista de tareas</h2>
+
+<pre><code class="language-python">
+tareas = []
+</code></pre>
+
+---
+
+<h2>Paso 2: Función para agregar tareas</h2>
+
+<pre><code class="language-python">
+def agregar_tarea():
+
+    tarea = input("Escribe una nueva tarea: ")
+
+    tareas.append(tarea)
+</code></pre>
+
+---
+
+<h2>Paso 3: Mostrar tareas</h2>
+
+<pre><code class="language-python">
+def mostrar_tareas():
+
+    if len(tareas) == 0:
+        print("No hay tareas")
+
+    for i, tarea in enumerate(tareas):
+        print(i + 1, "-", tarea)
+</code></pre>
+
+---
+
+<h2>Paso 4: Guardar tareas en un archivo</h2>
+
+<pre><code class="language-python">
+def guardar_tareas():
+
+    with open("tareas.txt", "w") as archivo:
+
+        for tarea in tareas:
+            archivo.write(tarea + "\n")
+</code></pre>
+
+---
+
+<h2>Paso 5: Cargar tareas desde archivo</h2>
+
+<pre><code class="language-python">
+def cargar_tareas():
+
+    try:
+
+        with open("tareas.txt", "r") as archivo:
+
+            for linea in archivo:
+                tareas.append(linea.strip())
+
+    except:
+        pass
+</code></pre>
+
+---
+
+<h2>Paso 6: Menú del programa</h2>
+
+<pre><code class="language-python">
+def menu():
+
+    while True:
+
+        print("\nGestor de tareas")
+        print("1. Agregar tarea")
+        print("2. Mostrar tareas")
+        print("3. Guardar tareas")
+        print("4. Salir")
+
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            agregar_tarea()
+
+        elif opcion == "2":
+            mostrar_tareas()
+
+        elif opcion == "3":
+            guardar_tareas()
+
+        elif opcion == "4":
+            break
+
+        else:
+            print("Opción inválida")
+</code></pre>
+
+---
+
+<h2>Programa completo</h2>
+
+<pre><code class="language-python">
+tareas = []
+
+def agregar_tarea():
+
+    tarea = input("Escribe una nueva tarea: ")
+    tareas.append(tarea)
+
+def mostrar_tareas():
+
+    if len(tareas) == 0:
+        print("No hay tareas")
+
+    for i, tarea in enumerate(tareas):
+        print(i + 1, "-", tarea)
+
+def guardar_tareas():
+
+    with open("tareas.txt", "w") as archivo:
+
+        for tarea in tareas:
+            archivo.write(tarea + "\n")
+
+def cargar_tareas():
+
+    try:
+
+        with open("tareas.txt", "r") as archivo:
+
+            for linea in archivo:
+                tareas.append(linea.strip())
+
+    except:
+        pass
+
+def menu():
+
+    while True:
+
+        print("\nGestor de tareas")
+        print("1. Agregar tarea")
+        print("2. Mostrar tareas")
+        print("3. Guardar tareas")
+        print("4. Salir")
+
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            agregar_tarea()
+
+        elif opcion == "2":
+            mostrar_tareas()
+
+        elif opcion == "3":
+            guardar_tareas()
+
+        elif opcion == "4":
+            break
+
+        else:
+            print("Opción inválida")
+
+cargar_tareas()
+
+menu()
+</code></pre>
+
+---
+
+<h2>Reto final</h2>
+
+<div class="ejercicio">
+
+<p>
+Mejora el programa agregando nuevas funcionalidades:
+</p>
+
+<ul>
+
+<li>Eliminar tareas</li>
+
+<li>Marcar tareas como completadas</li>
+
+<li>Mostrar número total de tareas</li>
+
+</ul>
+
+</div>
+
+---
+
+<h2>Conclusión</h2>
+
+<p>
+En esta guía aprendiste los fundamentos de programación usando Python:
+</p>
+
+<ul>
+
+<li>Variables</li>
+
+<li>Operadores</li>
+
+<li>Condicionales</li>
+
+<li>Bucles</li>
+
+<li>Listas</li>
+
+<li>Funciones</li>
+
+<li>Manejo de errores</li>
+
+<li>Programación orientada a objetos</li>
+
+<li>Archivos</li>
+
+</ul>
+
+<p>
+Con estos conocimientos puedes comenzar a desarrollar programas más
+complejos y seguir aprendiendo nuevas herramientas del lenguaje.
+</p>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/11-archivos.html')">
+⬅ Tema anterior
+</button>
+
+</div>

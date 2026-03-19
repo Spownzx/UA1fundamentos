@@ -1,0 +1,242 @@
+<h1>6. Colecciones (Listas)</h1>
+
+<p>
+Las colecciones permiten almacenar múltiples valores en una sola variable.
+Una de las colecciones más utilizadas en Python es la <strong>lista</strong>.
+</p>
+
+---
+
+<h2>Crear una lista</h2>
+
+<p>
+Una lista se define usando corchetes <code>[]</code>.
+</p>
+
+<pre><code class="language-python">
+numeros = [1, 2, 3, 4, 5]
+
+print(numeros)
+</code></pre>
+
+---
+
+<h2>Acceder a elementos de una lista</h2>
+
+<p>
+Cada elemento de una lista tiene una posición llamada índice.
+Los índices comienzan en 0.
+</p>
+
+<pre><code class="language-python">
+frutas = ["manzana", "banana", "naranja"]
+
+print(frutas[0])
+print(frutas[1])
+</code></pre>
+
+---
+
+<h2>Modificar elementos</h2>
+
+<p>
+Los valores de una lista pueden cambiarse usando su índice.
+</p>
+
+<pre><code class="language-python">
+numeros = [10, 20, 30]
+
+numeros[1] = 50
+
+print(numeros)
+</code></pre>
+
+---
+
+<h2>Recorrer listas con un bucle</h2>
+
+<p>
+Podemos recorrer todos los elementos de una lista usando un bucle <code>for</code>.
+</p>
+
+<pre><code class="language-python">
+frutas = ["manzana", "banana", "naranja"]
+
+for fruta in frutas:
+    print(fruta)
+</code></pre>
+
+---
+
+<h2>Agregar elementos</h2>
+
+<p>
+Podemos agregar elementos usando el método <code>append()</code>.
+</p>
+
+<pre><code class="language-python">
+numeros = [1,2,3]
+
+numeros.append(4)
+
+print(numeros)
+</code></pre>
+
+---
+
+<h2>Longitud de una lista</h2>
+
+<p>
+La función <code>len()</code> permite conocer cuántos elementos tiene una lista.
+</p>
+
+<pre><code class="language-python">
+frutas = ["manzana", "banana", "naranja"]
+
+print(len(frutas))
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Programa que calcula el promedio de una lista de números.
+</p>
+
+<pre><code class="language-python">
+numeros = [10, 8, 9, 7, 10]
+
+suma = 0
+
+for n in numeros:
+    suma += n
+
+promedio = suma / len(numeros)
+
+print("Promedio:", promedio)
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Crea una lista con 5 números e imprime cada número usando un bucle.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+numeros = [5, 10, 15, 20, 25]
+
+for n in numeros:
+    print(n)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Crea una lista vacía y agrega 3 nombres usando <code>append()</code>.
+Después imprime la lista completa.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+nombres = []
+
+nombres.append("Ana")
+nombres.append("Luis")
+nombres.append("Carlos")
+
+print(nombres)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Escribe un programa que encuentre el número mayor dentro de una lista.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+numeros = [5, 12, 8, 20, 3]
+
+mayor = numeros[0]
+
+for n in numeros:
+    if n > mayor:
+        mayor = n
+
+print("El número mayor es:", mayor)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Las listas permiten almacenar múltiples valores.</li>
+
+<li>Los elementos se acceden mediante índices.</li>
+
+<li>Podemos recorrer listas usando bucles <code>for</code>.</li>
+
+<li><code>append()</code> permite agregar nuevos elementos.</li>
+
+<li><code>len()</code> devuelve el número de elementos.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/05-bucles.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/07-funciones.html')">
+Tema siguiente ➡
+</button>
+
+</div>

@@ -1,0 +1,207 @@
+<h1>8. Manejo de errores</h1>
+
+<p>
+Durante la ejecución de un programa pueden ocurrir errores. 
+Por ejemplo, cuando el usuario introduce datos incorrectos o cuando se intenta
+dividir entre cero.
+</p>
+
+<p>
+Python permite manejar estos errores usando las instrucciones
+<code>try</code> y <code>except</code>.
+</p>
+
+---
+
+<h2>Uso de try y except</h2>
+
+<p>
+El bloque <code>try</code> contiene el código que puede generar un error.
+Si ocurre un error, el bloque <code>except</code> se ejecuta.
+</p>
+
+<pre><code class="language-python">
+try:
+    numero = int(input("Escribe un número: "))
+    print(numero)
+except:
+    print("Ocurrió un error")
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Programa que evita errores cuando el usuario introduce texto en lugar de números.
+</p>
+
+<pre><code class="language-python">
+try:
+    numero = int(input("Escribe un número: "))
+    print("Número ingresado:", numero)
+except:
+    print("Debes escribir un número válido")
+</code></pre>
+
+---
+
+<h2>Manejar errores específicos</h2>
+
+<p>
+También es posible manejar tipos específicos de errores.
+</p>
+
+<pre><code class="language-python">
+try:
+    a = int(input("Número 1: "))
+    b = int(input("Número 2: "))
+    resultado = a / b
+    print(resultado)
+
+except ZeroDivisionError:
+    print("No se puede dividir entre cero")
+
+except ValueError:
+    print("Debes escribir números válidos")
+</code></pre>
+
+---
+
+<h2>Uso de else</h2>
+
+<p>
+El bloque <code>else</code> se ejecuta cuando no ocurre ningún error.
+</p>
+
+<pre><code class="language-python">
+try:
+    numero = int(input("Número: "))
+except:
+    print("Error al convertir")
+else:
+    print("Número correcto:", numero)
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Escribe un programa que pida un número al usuario y muestre un mensaje
+si el valor no es válido.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+try:
+    numero = int(input("Escribe un número: "))
+    print("Número:", numero)
+except:
+    print("Entrada inválida")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Escribe un programa que divida dos números y evite el error de división entre cero.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+try:
+    a = int(input("Número 1: "))
+    b = int(input("Número 2: "))
+    print(a / b)
+
+except ZeroDivisionError:
+    print("No se puede dividir entre cero")
+
+except ValueError:
+    print("Debes escribir números válidos")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Crea un programa que pida la edad al usuario.
+Si introduce un valor inválido debe mostrar un mensaje de error.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+try:
+    edad = int(input("Edad: "))
+    print("Tu edad es:", edad)
+except:
+    print("Debes escribir un número válido")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Los errores pueden ocurrir durante la ejecución de un programa.</li>
+
+<li>El bloque <code>try</code> contiene el código que puede generar errores.</li>
+
+<li><code>except</code> permite manejar esos errores.</li>
+
+<li>Es posible manejar errores específicos como <code>ValueError</code> o <code>ZeroDivisionError</code>.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/07-funciones.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/09-poo.html')">
+Tema siguiente ➡
+</button>
+
+</div>
