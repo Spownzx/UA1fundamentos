@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Fundamentos de programación</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button id="menuToggle">☰</button>
+
+<nav class="sidebar">
+
+<h2>Fundamentos de programación</h2>
+<ul>
+
+<li onclick="cargarPagina('pages/01-intro.html')">1. Introducción</li>
+
+<li onclick="cargarPagina('pages/02-variables.html')">2. Variables</li>
+
+<li onclick="cargarPagina('pages/03-operadores.html')">3. Operadores</li>
+
+<li onclick="cargarPagina('pages/04-condicionales.html')">4. Condicionales</li>
+
+<li onclick="cargarPagina('pages/05-bucles.html')">5. Bucles</li>
+
+<li onclick="cargarPagina('pages/06-colecciones.html')">6. Colecciones</li>
+
+<li onclick="cargarPagina('pages/07-funciones.html')">7. Funciones</li>
+
+<li onclick="cargarPagina('pages/08-errores.html')">8. Manejo de errores</li>
+
+<li onclick="cargarPagina('pages/09-poo.html')">9. Programación orientada a objetos</li>
+
+<li onclick="cargarPagina('pages/10-herencia.html')">10. Herencia y polimorfismo</li>
+
+<li onclick="cargarPagina('pages/11-archivos.html')">11. Archivos</li>
+
+<li onclick="cargarPagina('pages/12-proyecto.html')">12. Proyecto completo</li>
+
+</ul>
+
+</nav>
+
+<button id="toggleTema">🌙</button>
+
+
+<div class="contenido-wrapper">
+
+<aside id="indice"></aside>
+
+<main id="contenido"></main>
+
+</div>
+</main>
+
+</div>
+
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+</body>
+</html>

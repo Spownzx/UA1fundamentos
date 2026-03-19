@@ -1,0 +1,2 @@
+1.Crear servidor: python -m http.server 8000
+2.Abrir la pagina: http://localhost:8000/index.html

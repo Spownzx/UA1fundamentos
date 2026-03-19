@@ -1,0 +1,220 @@
+<h1>11. Manejo de archivos</h1>
+
+<p>
+Los programas muchas veces necesitan guardar información para usarla después.
+Para esto se utilizan los <strong>archivos</strong>.
+</p>
+
+<p>
+Python permite crear, leer y modificar archivos fácilmente.
+</p>
+
+---
+
+<h2>Abrir un archivo</h2>
+
+<p>
+Para trabajar con archivos se utiliza la función <code>open()</code>.
+</p>
+
+<pre><code class="language-python">
+archivo = open("datos.txt", "w")
+
+archivo.write("Hola mundo")
+
+archivo.close()
+</code></pre>
+
+<p>
+El modo <code>"w"</code> significa que el archivo se abre para escritura.
+</p>
+
+---
+
+<h2>Modos de apertura</h2>
+
+<ul>
+
+<li><code>"r"</code> → leer archivo</li>
+
+<li><code>"w"</code> → escribir archivo (sobrescribe contenido)</li>
+
+<li><code>"a"</code> → agregar contenido al archivo</li>
+
+</ul>
+
+---
+
+<h2>Leer un archivo</h2>
+
+<pre><code class="language-python">
+archivo = open("datos.txt", "r")
+
+contenido = archivo.read()
+
+print(contenido)
+
+archivo.close()
+</code></pre>
+
+---
+
+<h2>Usar with para manejar archivos</h2>
+
+<p>
+La forma recomendada de trabajar con archivos es usando <code>with</code>.
+Esto evita olvidar cerrar el archivo.
+</p>
+
+<pre><code class="language-python">
+with open("datos.txt", "w") as archivo:
+    archivo.write("Hola mundo")
+</code></pre>
+
+---
+
+<h2>Leer línea por línea</h2>
+
+<pre><code class="language-python">
+with open("datos.txt", "r") as archivo:
+
+    for linea in archivo:
+        print(linea)
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Programa que guarda nombres en un archivo.
+</p>
+
+<pre><code class="language-python">
+nombre = input("Escribe tu nombre: ")
+
+with open("nombres.txt", "a") as archivo:
+
+    archivo.write(nombre + "\n")
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Crea un programa que escriba tres líneas de texto en un archivo.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+with open("archivo.txt", "w") as f:
+
+    f.write("Linea 1\n")
+    f.write("Linea 2\n")
+    f.write("Linea 3\n")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Escribe un programa que lea un archivo de texto e imprima su contenido.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+with open("archivo.txt", "r") as f:
+
+    contenido = f.read()
+
+print(contenido)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Crea un programa que permita guardar varios nombres en un archivo y luego
+mostrar todos los nombres guardados.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+nombre = input("Nombre: ")
+
+with open("nombres.txt", "a") as f:
+    f.write(nombre + "\n")
+
+with open("nombres.txt", "r") as f:
+
+    for linea in f:
+        print(linea)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Los archivos permiten guardar información.</li>
+
+<li>La función <code>open()</code> se usa para trabajar con archivos.</li>
+
+<li>Los modos más comunes son <code>r</code>, <code>w</code> y <code>a</code>.</li>
+
+<li>La estructura <code>with</code> es la forma recomendada de manejar archivos.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/10-herencia.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/12-proyecto.html')">
+Tema siguiente ➡
+</button>
+
+</div>

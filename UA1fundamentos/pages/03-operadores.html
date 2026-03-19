@@ -1,0 +1,211 @@
+<h1>3. Operadores y expresiones</h1>
+
+<p>
+Los operadores permiten realizar operaciones con variables y valores.
+Se utilizan para hacer cálculos matemáticos, comparaciones y evaluar condiciones.
+</p>
+
+<h2>Operadores aritméticos</h2>
+
+<p>
+Se usan para realizar operaciones matemáticas.
+</p>
+
+<ul>
+<li><code>+</code> suma</li>
+<li><code>-</code> resta</li>
+<li><code>*</code> multiplicación</li>
+<li><code>/</code> división</li>
+<li><code>//</code> división entera</li>
+<li><code>%</code> módulo (residuo)</li>
+<li><code>**</code> potencia</li>
+</ul>
+
+<pre><code class="language-python">
+a = 10
+b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a // b)
+print(a % b)
+print(a ** b)
+</code></pre>
+
+---
+
+<h2>Operadores de comparación</h2>
+
+<p>
+Se utilizan para comparar valores.  
+El resultado siempre es <code>True</code> o <code>False</code>.
+</p>
+
+<pre><code class="language-python">
+x = 10
+y = 5
+
+print(x > y)
+print(x < y)
+print(x == y)
+print(x != y)
+print(x >= y)
+print(x <= y)
+</code></pre>
+
+---
+
+<h2>Operadores lógicos</h2>
+
+<p>
+Los operadores lógicos permiten combinar condiciones.
+</p>
+
+<ul>
+<li><code>and</code> → verdadero si ambas condiciones son verdaderas</li>
+<li><code>or</code> → verdadero si al menos una condición es verdadera</li>
+<li><code>not</code> → invierte el valor lógico</li>
+</ul>
+
+<pre><code class="language-python">
+edad = 20
+tiene_identificacion = True
+
+print(edad >= 18 and tiene_identificacion)
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Programa que verifica si un número es par.
+</p>
+
+<pre><code class="language-python">
+numero = int(input("Escribe un número: "))
+
+print(numero % 2 == 0)
+</code></pre>
+
+<p>
+El operador <code>%</code> obtiene el residuo de la división.
+Si el residuo es 0, el número es par.
+</p>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Escribe un programa que calcule el área de un rectángulo.
+El programa debe pedir base y altura.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+base = float(input("Base: "))
+altura = float(input("Altura: "))
+
+area = base * altura
+
+print("El área es:", area)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Escribe un programa que determine si una persona puede votar.
+La edad mínima es 18 años.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+edad = int(input("Escribe tu edad: "))
+
+print(edad >= 18)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Escribe un programa que determine si un número está entre 10 y 20.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+numero = int(input("Número: "))
+
+print(numero >= 10 and numero <= 20)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Los operadores permiten realizar cálculos y comparaciones.</li>
+
+<li>Los operadores aritméticos realizan operaciones matemáticas.</li>
+
+<li>Los operadores de comparación producen valores <code>True</code> o <code>False</code>.</li>
+
+<li>Los operadores lógicos permiten combinar condiciones.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/02-variables.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/04-condicionales.html')">
+Tema siguiente ➡
+</button>
+
+</div>

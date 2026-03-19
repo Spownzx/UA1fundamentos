@@ -1,0 +1,260 @@
+<h1>10. Herencia y polimorfismo</h1>
+
+<p>
+La herencia permite crear una clase basada en otra clase existente.
+Esto permite reutilizar código y extender funcionalidades.
+</p>
+
+---
+
+<h2>Herencia</h2>
+
+<p>
+Una clase puede heredar atributos y métodos de otra clase.
+</p>
+
+<pre><code class="language-python">
+class Animal:
+
+    def hablar(self):
+        print("El animal hace un sonido")
+</code></pre>
+
+<p>
+Ahora creamos otra clase que hereda de <strong>Animal</strong>.
+</p>
+
+<pre><code class="language-python">
+class Perro(Animal):
+    pass
+
+perro1 = Perro()
+
+perro1.hablar()
+</code></pre>
+
+<p>
+La clase <strong>Perro</strong> hereda el método <code>hablar()</code>.
+</p>
+
+---
+
+<h2>Sobrescribir métodos</h2>
+
+<p>
+Una clase hija puede modificar el comportamiento de un método heredado.
+</p>
+
+<pre><code class="language-python">
+class Animal:
+
+    def hablar(self):
+        print("El animal hace un sonido")
+
+class Perro(Animal):
+
+    def hablar(self):
+        print("El perro ladra")
+
+perro1 = Perro()
+
+perro1.hablar()
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Clase base para diferentes tipos de empleados.
+</p>
+
+<pre><code class="language-python">
+class Empleado:
+
+    def trabajar(self):
+        print("El empleado está trabajando")
+
+class Programador(Empleado):
+
+    def trabajar(self):
+        print("El programador está escribiendo código")
+
+emp = Programador()
+
+emp.trabajar()
+</code></pre>
+
+---
+
+<h2>Polimorfismo</h2>
+
+<p>
+El polimorfismo permite usar diferentes objetos con el mismo método.
+</p>
+
+<pre><code class="language-python">
+class Gato:
+
+    def hablar(self):
+        print("Miau")
+
+class Perro:
+
+    def hablar(self):
+        print("Guau")
+
+animales = [Gato(), Perro()]
+
+for animal in animales:
+    animal.hablar()
+</code></pre>
+
+<p>
+Cada objeto responde de forma diferente al mismo método.
+</p>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Crea una clase <strong>Vehiculo</strong> con un método <code>mover()</code>.
+Luego crea una clase <strong>Auto</strong> que herede de ella.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+class Vehiculo:
+
+    def mover(self):
+        print("El vehículo se mueve")
+
+class Auto(Vehiculo):
+    pass
+
+a = Auto()
+
+a.mover()
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Modifica la clase <strong>Auto</strong> para que sobrescriba el método
+<code>mover()</code>.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+class Vehiculo:
+
+    def mover(self):
+        print("El vehículo se mueve")
+
+class Auto(Vehiculo):
+
+    def mover(self):
+        print("El auto está conduciendo")
+
+a = Auto()
+
+a.mover()
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Crea una clase <strong>Figura</strong> con un método <code>area()</code>.
+Después crea una clase <strong>Cuadrado</strong> que herede de ella
+y calcule el área correctamente.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+class Figura:
+
+    def area(self):
+        print("Área desconocida")
+
+class Cuadrado(Figura):
+
+    def __init__(self, lado):
+        self.lado = lado
+
+    def area(self):
+        print(self.lado * self.lado)
+
+c = Cuadrado(5)
+
+c.area()
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>La herencia permite crear clases basadas en otras.</li>
+
+<li>Las clases hijas heredan atributos y métodos.</li>
+
+<li>Los métodos pueden sobrescribirse.</li>
+
+<li>El polimorfismo permite usar el mismo método en diferentes objetos.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/09-poo.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/11-archivos.html')">
+Tema siguiente ➡
+</button>
+
+</div>

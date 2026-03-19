@@ -1,0 +1,251 @@
+<h1>9. Programación Orientada a Objetos</h1>
+
+<p>
+La Programación Orientada a Objetos (POO) es un paradigma que permite
+organizar los programas utilizando <strong>clases</strong> y <strong>objetos</strong>.
+</p>
+
+<p>
+Este enfoque facilita crear programas más organizados y reutilizables.
+</p>
+
+---
+
+<h2>Crear una clase</h2>
+
+<p>
+Una clase es como un molde para crear objetos.
+</p>
+
+<pre><code class="language-python">
+class Persona:
+    pass
+</code></pre>
+
+<p>
+En este ejemplo se crea una clase llamada <strong>Persona</strong>.
+</p>
+
+---
+
+<h2>Crear un objeto</h2>
+
+<p>
+Un objeto es una instancia de una clase.
+</p>
+
+<pre><code class="language-python">
+class Persona:
+    pass
+
+persona1 = Persona()
+
+print(persona1)
+</code></pre>
+
+---
+
+<h2>Atributos</h2>
+
+<p>
+Los atributos son variables que pertenecen a un objeto.
+</p>
+
+<pre><code class="language-python">
+class Persona:
+
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+persona1 = Persona("Ana", 25)
+
+print(persona1.nombre)
+print(persona1.edad)
+</code></pre>
+
+<p>
+El método <code>__init__</code> se ejecuta cuando se crea un objeto.
+</p>
+
+---
+
+<h2>Métodos</h2>
+
+<p>
+Los métodos son funciones que pertenecen a una clase.
+</p>
+
+<pre><code class="language-python">
+class Persona:
+
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def saludar(self):
+        print("Hola, mi nombre es", self.nombre)
+
+persona1 = Persona("Luis")
+
+persona1.saludar()
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Clase que representa un automóvil.
+</p>
+
+<pre><code class="language-python">
+class Auto:
+
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+
+    def mostrar_info(self):
+        print("Marca:", self.marca)
+        print("Modelo:", self.modelo)
+
+auto1 = Auto("Toyota", "Corolla")
+
+auto1.mostrar_info()
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Crea una clase llamada <strong>Animal</strong> que tenga un atributo
+<code>nombre</code>.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+class Animal:
+
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+animal1 = Animal("Perro")
+
+print(animal1.nombre)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Crea una clase llamada <strong>Estudiante</strong> con los atributos
+nombre y calificación.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+class Estudiante:
+
+    def __init__(self, nombre, calificacion):
+        self.nombre = nombre
+        self.calificacion = calificacion
+
+est1 = Estudiante("Ana", 90)
+
+print(est1.nombre)
+print(est1.calificacion)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Crea una clase llamada <strong>Rectangulo</strong> que tenga base y altura
+y un método que calcule el área.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+class Rectangulo:
+
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
+
+    def area(self):
+        return self.base * self.altura
+
+r = Rectangulo(5, 3)
+
+print(r.area())
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Una clase es un molde para crear objetos.</li>
+
+<li>Un objeto es una instancia de una clase.</li>
+
+<li>Los atributos almacenan información.</li>
+
+<li>Los métodos son funciones dentro de una clase.</li>
+
+<li>El método <code>__init__</code> se ejecuta cuando se crea el objeto.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/08-errores.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/10-herencia.html')">
+Tema siguiente ➡
+</button>
+
+</div>

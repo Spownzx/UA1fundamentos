@@ -1,0 +1,213 @@
+<h1>7. Funciones</h1>
+
+<p>
+Las funciones permiten agrupar instrucciones en un bloque reutilizable.
+Esto ayuda a organizar mejor los programas y evitar repetir código.
+</p>
+
+---
+
+<h2>Definir una función</h2>
+
+<p>
+En Python una función se define usando la palabra clave <code>def</code>.
+</p>
+
+<pre><code class="language-python">
+def saludar():
+    print("Hola")
+</code></pre>
+
+<p>
+Para ejecutar la función debemos llamarla por su nombre.
+</p>
+
+<pre><code class="language-python">
+saludar()
+</code></pre>
+
+---
+
+<h2>Funciones con parámetros</h2>
+
+<p>
+Las funciones pueden recibir información llamada <strong>parámetros</strong>.
+</p>
+
+<pre><code class="language-python">
+def saludar(nombre):
+    print("Hola", nombre)
+
+saludar("Ana")
+saludar("Luis")
+</code></pre>
+
+---
+
+<h2>Funciones que retornan valores</h2>
+
+<p>
+Las funciones también pueden devolver resultados usando <code>return</code>.
+</p>
+
+<pre><code class="language-python">
+def sumar(a, b):
+    resultado = a + b
+    return resultado
+
+r = sumar(5, 3)
+
+print(r)
+</code></pre>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Programa que usa una función para calcular el área de un rectángulo.
+</p>
+
+<pre><code class="language-python">
+def area_rectangulo(base, altura):
+    return base * altura
+
+resultado = area_rectangulo(5, 3)
+
+print("Área:", resultado)
+</code></pre>
+
+---
+
+<h2>Funciones con múltiples llamadas</h2>
+
+<p>
+Una función puede ejecutarse muchas veces dentro de un programa.
+</p>
+
+<pre><code class="language-python">
+def cuadrado(numero):
+    return numero * numero
+
+print(cuadrado(2))
+print(cuadrado(5))
+print(cuadrado(10))
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Crea una función llamada <code>saludar()</code> que imprima
+"Bienvenido al programa".
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+def saludar():
+    print("Bienvenido al programa")
+
+saludar()
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Crea una función que reciba un número y devuelva su doble.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+def doble(numero):
+    return numero * 2
+
+print(doble(5))
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Mini reto</h2>
+
+<div class="ejercicio">
+
+<p>
+Crea una función que reciba dos números y devuelva el número mayor.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+def mayor(a, b):
+
+    if a > b:
+        return a
+    else:
+        return b
+
+print(mayor(10, 5))
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Las funciones permiten reutilizar código.</li>
+
+<li>Se definen usando <code>def</code>.</li>
+
+<li>Pueden recibir parámetros.</li>
+
+<li>Pueden devolver valores usando <code>return</code>.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/06-colecciones.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/08-errores.html')">
+Tema siguiente ➡
+</button>
+
+</div>

@@ -1,0 +1,193 @@
+<h1>2. Variables y tipos de datos</h1>
+
+<p>
+Las variables permiten almacenar información dentro de un programa.
+Podemos guardar números, texto o valores lógicos y utilizarlos más adelante.
+</p>
+
+<h2>Crear una variable</h2>
+
+<p>
+En Python no es necesario declarar el tipo de la variable.
+Solo se asigna un valor usando el operador <code>=</code>.
+</p>
+
+<pre><code class="language-python">
+nombre = "Luis"
+edad = 20
+
+print(nombre)
+print(edad)
+</code></pre>
+
+<p>
+En este ejemplo se crean dos variables: <code>nombre</code> y <code>edad</code>.
+</p>
+
+---
+
+<h2>Tipos de datos básicos</h2>
+
+<p>
+Python tiene varios tipos de datos, pero los más usados al inicio son:
+</p>
+
+<ul>
+<li><strong>int</strong> → números enteros</li>
+<li><strong>float</strong> → números con decimales</li>
+<li><strong>str</strong> → texto</li>
+<li><strong>bool</strong> → valores verdadero o falso</li>
+</ul>
+
+<pre><code class="language-python">
+numero = 10        # int
+precio = 19.99     # float
+nombre = "Ana"     # str
+activo = True      # bool
+</code></pre>
+
+---
+
+<h2>Mostrar el tipo de una variable</h2>
+
+<p>
+Python tiene la función <code>type()</code> que permite saber qué tipo de dato tiene una variable.
+</p>
+
+<pre><code class="language-python">
+edad = 25
+
+print(type(edad))
+</code></pre>
+
+---
+
+<h2>Conversión de tipos</h2>
+
+<p>
+A veces necesitamos convertir un dato de un tipo a otro.
+Esto se llama conversión de tipos.
+</p>
+
+<pre><code class="language-python">
+edad = input("Escribe tu edad: ")
+
+edad = int(edad)
+
+print("El próximo año tendrás", edad + 1)
+</code></pre>
+
+<p>
+La función <code>int()</code> convierte texto en número entero.
+</p>
+
+---
+
+<h2>Ejemplo práctico</h2>
+
+<p>
+Programa que calcula el año de nacimiento de una persona.
+</p>
+
+<pre><code class="language-python">
+edad = int(input("Escribe tu edad: "))
+
+anio_actual = 2025
+
+anio_nacimiento = anio_actual - edad
+
+print("Naciste aproximadamente en", anio_nacimiento)
+</code></pre>
+
+---
+
+<h2>Ejercicio</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Escribe un programa que pida dos números al usuario y muestre su suma.
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+numero1 = int(input("Primer número: "))
+numero2 = int(input("Segundo número: "))
+
+resultado = numero1 + numero2
+
+print("La suma es:", resultado)
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Escribe un programa que pida el nombre y la edad de una persona
+y luego muestre el siguiente mensaje:
+</p>
+
+<p>
+<em>"Hola [nombre], tienes [edad] años"</em>
+</p>
+
+<button class="boton-solucion" onclick="mostrarSolucion(this)">
+Ver solución
+</button>
+
+<div class="solucion">
+
+<pre><code class="language-python">
+nombre = input("Escribe tu nombre: ")
+edad = input("Escribe tu edad: ")
+
+print("Hola", nombre, "tienes", edad, "años")
+</code></pre>
+
+</div>
+
+</div>
+
+---
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li>Las variables almacenan información.</li>
+
+<li>Python detecta automáticamente el tipo de dato.</li>
+
+<li>Los tipos básicos son <code>int</code>, <code>float</code>, <code>str</code> y <code>bool</code>.</li>
+
+<li>Las funciones como <code>int()</code> permiten convertir tipos de datos.</li>
+
+</ul>
+
+---
+
+<div class="navegacion">
+
+<button onclick="cargarPagina('pages/01-intro.html')">
+⬅ Tema anterior
+</button>
+
+<button onclick="cargarPagina('pages/03-operadores.html')">
+Tema siguiente ➡
+</button>
+
+</div>
